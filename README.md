@@ -20,7 +20,7 @@ source .venv/bin/activate
 pip3 install -r requirements.txt
 ```
 ## Required environment variables
-In order for the program to run, certain environment variables must be configured.
+In order for the program to run, certain environment variables must be configured from an existing AWS account. Place these variables in a .env file along with their actual values.
 - DB_HOST
 - DB_PORT
 - DB_NAME
