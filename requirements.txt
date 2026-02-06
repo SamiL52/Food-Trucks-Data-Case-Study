@@ -1,0 +1,8 @@
+pymysql
+pytest
+pylint
+pandas
+altair[all]
+awswrangler
+dotenv
+streamlit

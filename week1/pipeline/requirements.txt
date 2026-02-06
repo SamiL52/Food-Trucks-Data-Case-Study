@@ -1,0 +1,6 @@
+pymysql
+pytest
+pylint
+pandas
+awswrangler
+dotenv
