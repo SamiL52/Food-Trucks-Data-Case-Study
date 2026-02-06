@@ -19,6 +19,19 @@ source .venv/bin/activate
 ```
 pip3 install -r requirements.txt
 ```
+## Required environment variables
+In order for the program to run, certain environment variables must be configured.
+- DB_HOST
+- DB_PORT
+- DB_NAME
+- DB_USER
+- DB_PASSWORD
+
+- AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
+- AWS_REGION
+- AWS_DEFAULT_REGION
+- S3_BUCKET_NAME
 ## Run
 ```
 terraform init
