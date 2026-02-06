@@ -1,7 +1,7 @@
-# Food-Trucks-Data-Case-Study
+# Food Trucks Data Case Study
 # Description
 This is a case study of a mock food truck company. Multiple food trucks are reporting their transaction data to the cloud. This project involves the implementation of a full Extract-Transform-Load data pipeline using AWS S3, ECS, and Lambda services which are setup in code using Terraform. When run, raw data about the transactions and sales of all food trucks will be extracted from the source, cleaned and reformatted, and loaded into parquet files for long term storage. Reports will be generated using daily and emailed to configured recipients via AWS SES and Athena.
-## Setup
+# Setup
 These instructions are for MacOS. Similar commands can be found online for other operating systems.
 Clone this repository
 ```
