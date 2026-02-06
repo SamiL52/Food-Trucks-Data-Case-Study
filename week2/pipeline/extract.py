@@ -8,15 +8,16 @@ import awswrangler as wr
 
 DATABASE_NAME = 'c20-sami-truck-database'
 
+
 def get_db_connection() -> None:
     """Returns a live connection to the database"""
     load_dotenv()
     conn = connect(
-        host = environ['DB_HOST'],
-        user = environ['DB_USER'],
-        password = environ['DB_PASSWORD'],
-        database = environ['DB_NAME'],
-        port = 3306
+        host=environ['DB_HOST'],
+        user=environ['DB_USER'],
+        password=environ['DB_PASSWORD'],
+        database=environ['DB_NAME'],
+        port=3306
     )
 
     return conn
@@ -62,13 +63,13 @@ def download_save_data(conn: Connection, timestamp: datetime) -> None:
             ORDER BY at DESC;
         """, conn)
 
-    truck_df.to_csv('./data/truck.csv', index = False)
-    payment_method_df.to_csv('./data/payment_method.csv', index = False)
-    transaction_df.to_csv('./data/transaction.csv', index = False)
+    truck_df.to_csv('./data/truck.csv', index=False)
+    payment_method_df.to_csv('./data/payment_method.csv', index=False)
+    transaction_df.to_csv('./data/transaction.csv', index=False)
+
 
 if __name__ == '__main__':
     most_recent_timestamp = get_most_recent_timestamp()
     connection = get_db_connection()
     download_save_data(connection, most_recent_timestamp)
     connection.close()
-    # print(get_all_data())
